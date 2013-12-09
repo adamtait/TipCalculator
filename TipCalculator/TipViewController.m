@@ -7,6 +7,7 @@
 //
 
 #import "TipViewController.h"
+#import "SettingsViewController.h"
 
 @interface TipViewController ()
 
@@ -17,9 +18,14 @@
 
 - (IBAction)onTap:(id)sender;
 - (void)updateValues;
+- (void)onSettingsButton;
 @end
 
 @implementation TipViewController
+
+
+////////////////////////////////////////////////////////////
+// lifecycle methods
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +42,7 @@
     // Do any additional setup after loading the view from its nib.
     
     [self updateValues];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,10 +51,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    int tipControlIndexDefault = [defaults integerForKey:@"noco.TipVIewController.tipControl.index.default"];
+    self.tipControl.selectedSegmentIndex = tipControlIndexDefault;
+}
+
+
+////////////////////////////////////////////////////////////
+// event handlers
+
 - (IBAction)onTap:(id)sender {
     [self.view endEditing:YES];
     [self updateValues];
 }
+
+////////////////////////////////////////////////////////////
+// delegate methods
 
 - (void)updateValues {
     float billAmount = [self.billTextField.text floatValue];
@@ -57,5 +77,9 @@
     
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount];
+}
+
+- (void)onSettingsButton {
+    [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
 }
 @end
