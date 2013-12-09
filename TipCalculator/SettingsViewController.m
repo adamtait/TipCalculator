@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "UserDefaults.h"
 
 @interface SettingsViewController ()
 
@@ -16,6 +17,9 @@
 @end
 
 @implementation SettingsViewController
+
+////////////////////////////////////////////////////////////
+// lifecycle methods
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,8 +39,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.tipDefaultControl.selectedSegmentIndex = [defaults integerForKey:@"noco.TipVIewController.tipControl.index.default"];
+    self.tipDefaultControl.selectedSegmentIndex = [UserDefaults getTipControlDefault];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,9 +48,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+////////////////////////////////////////////////////////////
+// delegate methods
+
 - (IBAction)updateTipControlIndexDefault:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:self.tipDefaultControl.selectedSegmentIndex forKey:@"noco.TipVIewController.tipControl.index.default"];
-    [defaults synchronize];
+    [UserDefaults setTipControlDefault:self.tipDefaultControl.selectedSegmentIndex];
 }
 @end

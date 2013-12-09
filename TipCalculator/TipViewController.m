@@ -8,6 +8,7 @@
 
 #import "TipViewController.h"
 #import "SettingsViewController.h"
+#import "UserDefaults.h"
 
 @interface TipViewController ()
 
@@ -52,9 +53,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    int tipControlIndexDefault = [defaults integerForKey:@"noco.TipVIewController.tipControl.index.default"];
-    self.tipControl.selectedSegmentIndex = tipControlIndexDefault;
+    self.tipControl.selectedSegmentIndex = [UserDefaults getTipControlDefault];
 }
 
 

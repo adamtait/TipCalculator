@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		611076701855887000EC042E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110766E1855887000EC042E /* SettingsViewController.m */; };
 		611076711855887000EC042E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6110766F1855887000EC042E /* SettingsViewController.xib */; };
+		611076741855A5E300EC042E /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 611076731855A5E300EC042E /* UserDefaults.m */; };
 		61C6BA191855642100D5D6A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C6BA181855642100D5D6A2 /* Foundation.framework */; };
 		61C6BA1B1855642100D5D6A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C6BA1A1855642100D5D6A2 /* CoreGraphics.framework */; };
 		61C6BA1D1855642100D5D6A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C6BA1C1855642100D5D6A2 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 		6110766D1855887000EC042E /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		6110766E1855887000EC042E /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		6110766F1855887000EC042E /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		611076721855A5E300EC042E /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
+		611076731855A5E300EC042E /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
 		61C6BA151855642100D5D6A2 /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C6BA181855642100D5D6A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		61C6BA1A1855642100D5D6A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				6110766D1855887000EC042E /* SettingsViewController.h */,
 				6110766E1855887000EC042E /* SettingsViewController.m */,
 				6110766F1855887000EC042E /* SettingsViewController.xib */,
+				611076721855A5E300EC042E /* UserDefaults.h */,
+				611076731855A5E300EC042E /* UserDefaults.m */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C6BA251855642100D5D6A2 /* main.m in Sources */,
+				611076741855A5E300EC042E /* UserDefaults.m in Sources */,
 				61C6BA4E18556D1E00D5D6A2 /* TipViewController.m in Sources */,
 				61C6BA291855642100D5D6A2 /* nocoAppDelegate.m in Sources */,
 				611076701855887000EC042E /* SettingsViewController.m in Sources */,
