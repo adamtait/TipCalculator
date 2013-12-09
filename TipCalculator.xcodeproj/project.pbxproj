@@ -19,6 +19,8 @@
 		61C6BA341855642200D5D6A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C6BA1C1855642100D5D6A2 /* UIKit.framework */; };
 		61C6BA3C1855642200D5D6A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61C6BA3A1855642200D5D6A2 /* InfoPlist.strings */; };
 		61C6BA3E1855642200D5D6A2 /* TipCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C6BA3D1855642200D5D6A2 /* TipCalculatorTests.m */; };
+		61C6BA4E18556D1E00D5D6A2 /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C6BA4C18556D1E00D5D6A2 /* TipViewController.m */; };
+		61C6BA4F18556D1E00D5D6A2 /* TipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61C6BA4D18556D1E00D5D6A2 /* TipViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		61C6BA391855642200D5D6A2 /* TipCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TipCalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		61C6BA3B1855642200D5D6A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61C6BA3D1855642200D5D6A2 /* TipCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipCalculatorTests.m; sourceTree = "<group>"; };
+		61C6BA4B18556D1E00D5D6A2 /* TipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
+		61C6BA4C18556D1E00D5D6A2 /* TipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
+		61C6BA4D18556D1E00D5D6A2 /* TipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,9 @@
 				61C6BA281855642100D5D6A2 /* nocoAppDelegate.m */,
 				61C6BA2A1855642100D5D6A2 /* Images.xcassets */,
 				61C6BA1F1855642100D5D6A2 /* Supporting Files */,
+				61C6BA4B18556D1E00D5D6A2 /* TipViewController.h */,
+				61C6BA4C18556D1E00D5D6A2 /* TipViewController.m */,
+				61C6BA4D18556D1E00D5D6A2 /* TipViewController.xib */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C6BA4F18556D1E00D5D6A2 /* TipViewController.xib in Resources */,
 				61C6BA231855642100D5D6A2 /* InfoPlist.strings in Resources */,
 				61C6BA2B1855642100D5D6A2 /* Images.xcassets in Resources */,
 			);
@@ -241,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C6BA251855642100D5D6A2 /* main.m in Sources */,
+				61C6BA4E18556D1E00D5D6A2 /* TipViewController.m in Sources */,
 				61C6BA291855642100D5D6A2 /* nocoAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +373,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TipCalculator/TipCalculator-Prefix.pch";
 				INFOPLIST_FILE = "TipCalculator/TipCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -376,7 +388,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TipCalculator/TipCalculator-Prefix.pch";
 				INFOPLIST_FILE = "TipCalculator/TipCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -442,6 +456,7 @@
 				61C6BA431855642200D5D6A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61C6BA441855642200D5D6A2 /* Build configuration list for PBXNativeTarget "TipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +465,7 @@
 				61C6BA461855642200D5D6A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
